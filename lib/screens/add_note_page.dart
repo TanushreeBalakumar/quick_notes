@@ -36,8 +36,10 @@ class _AddNotePageState extends State<AddNotePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple.shade50,
       appBar: AppBar(
         title: const Text('Add New Note'),
+        backgroundColor: Colors.purple.shade300,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -50,6 +52,7 @@ class _AddNotePageState extends State<AddNotePage> {
                 border: OutlineInputBorder(),
               ),
             ),
+
             const SizedBox(height: 16),
             TextField(
               controller: _descController,
@@ -59,6 +62,7 @@ class _AddNotePageState extends State<AddNotePage> {
                 border: OutlineInputBorder(),
               ),
             ),
+
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: _saveNote,

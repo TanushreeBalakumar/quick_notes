@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import '../models/note.dart';
 import 'add_note_page.dart';
@@ -22,12 +20,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[50],
       appBar: AppBar(
+        leading: Icon(Icons.menu, color: Colors.black),
         title: const Text('QuickNotes'),
+        backgroundColor: Colors.purple.shade300,
       ),
       
       body: notes.isEmpty
-          ? const Center(child: Text('No notes yet! Add some.'))
+          ? const Center(child: Text('No notes yet! Add some.',style: TextStyle(fontSize: 24),))
           : ListView.builder(
               itemCount: notes.length,
               itemBuilder: (context, index) {
