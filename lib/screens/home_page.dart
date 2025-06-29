@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/note.dart';
-import 'add_note_page.dart';
+import 'package:go_router/go_router.dart';
+
 
 class HomePage extends StatefulWidget{
   const HomePage({super.key});
@@ -45,12 +46,7 @@ class _HomePageState extends State<HomePage> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
-          final result = await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddNotePage(),
-            ),
-          );
+          final result = await context.push('/add');
 
           if (result != null && result is Note) {
             _addNote(result);

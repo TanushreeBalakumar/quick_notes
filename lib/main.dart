@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_page.dart';
+import 'router/app_router.dart';
 
 void main(){
   runApp(const QuickNotesApp());
@@ -10,13 +10,13 @@ class QuickNotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'QuickNotes',
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const HomePage(),
+      routerConfig: appRouter,
     );
   }
 }
