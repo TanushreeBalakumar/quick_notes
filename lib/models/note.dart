@@ -1,13 +1,3 @@
-/*class Note {
-  final String title;
-  final String description;
-
-  Note({
-    required this.title,
-    required this.description,
-  });
-}*/
-
 import 'package:json_annotation/json_annotation.dart';
 
 part 'note.g.dart';
